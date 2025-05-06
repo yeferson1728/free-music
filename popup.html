@@ -21,11 +21,24 @@
         <button class="play-button" data-url="https://samplelib.com/lib/preview/mp3/sample-6s.mp3">▶</button>
       </div>
     </div>
-    <div class="footer">
-      <span>22 plays left</span>
-      <a href="#" class="upgrade">Upgrade</a>
+    <div class="music-controls">
+      <button id="play-pause">Play</button>
+      <input type="range" id="progress-bar" value="0" min="0" max="100" style="display: none;">
+    </div>
+    <div class="toggle-container">
+      <label class="toggle-switch">
+        <input type="checkbox" id="floating-button-toggle" checked>
+        <span class="slider round"></span>
+      </label>
+      <span class="toggle-label">Mostrar botón flotante</span>
+    </div>
+    <div class="play-count-container">
+      <div class="play-count">
+        <span class="play-count-remaining" id="play-count-display">25</span> canciones restantes hoy
+      </div>
     </div>
   </div>
   <script src="popup.js"></script>
 </body>
 </html>
+

@@ -2,21 +2,23 @@
   "manifest_version": 3,
   "name": "FreeFlow Music",
   "version": "1.0",
-  "description": "Reproduce música libre y sin complicaciones.",
+  "description": "Reproduce música gratis mientras navegas",
+  "permissions": [
+    "storage",
+    "offscreen",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.jamendo.com/*"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
     }
   },
-  "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
-  },
-  "permissions": ["offscreen", "storage"],
   "background": {
     "service_worker": "background.js"
   },
@@ -26,5 +28,9 @@
       "js": ["content.js"]
     }
   ],
-  "host_permissions": ["<all_urls>"]
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
 }
